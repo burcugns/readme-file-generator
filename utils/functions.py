@@ -1,5 +1,8 @@
+from rich.console import Console
+from rich import print
+
 #create README file function
- 
+
 def createReadmeFile(prompt):
     return f"""
   
@@ -33,12 +36,13 @@ def createReadmeFile(prompt):
 
 # get user input function
 def getUserInput(prompt_message):
+    console = Console()
     while True:
-      prompt = input(prompt_message)
+      prompt = console.input("[bright_yellow]"+prompt_message+"[/bright_yellow]" )
       if(checkEmptyInput(prompt)):
           return prompt
       else:
-          print("Input cannot be empty. Please try again.")
+          print("[bold red]Input cannot be empty. Please try again.[/bold red]")
 
 # check empty input function
 def checkEmptyInput(prompt):
