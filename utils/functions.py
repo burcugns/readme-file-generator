@@ -5,7 +5,6 @@ from rich import print
 
 def createReadmeFile(prompt):
     return f"""
-  
 # {prompt.title.capitalize()}
 
 
